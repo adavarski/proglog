@@ -64,6 +64,23 @@ $ docker push davarski/proglog:0.0.10
 ```
 ### K8s deploy
 ```
+
+## Instal KIND
+
+$ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64 && chmod +x ./kind && sudo mv ./kind /usr/local/bin/kind
+
+## Create cluster (CNI=Calico, Enable ingress)
+
+$ kind create cluster --name devops --config cluster-config.yaml
+
+$ kind get kubeconfig --name="devops" > admin.conf
+$ export KUBECONFIG=./admin.conf 
+
+$ kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+$ kubectl -n kube-system set env daemonset/calico-node FELIX_IGNORELOOSERPF=true
+
+## Deploy Go distributed service:
+
 $ helm install proglog deploy/proglog/
 $ helm list
 
