@@ -1,4 +1,4 @@
-## Distributed Services with Go: Commit Log from Travis Jeffery's book
+## Distributed Services with Go: Commit Log Distributed App/Service from Travis Jeffery's book
 
 This repository follows the book "Distributed Services with Go" by Travis Jeffrey with some fixes (https://github.com/varunbpatil/proglog/commit/2ecd0d7812b40583b76594eb148c1b4e60ca835b && https://github.com/evdzhurov/dist-services-with-go/issues/1)
 
