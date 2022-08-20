@@ -1,4 +1,4 @@
-### Distributed Services with Go: Commit Log from Travis Jeffery's Distributed Services book
+## Distributed Services with Go: Commit Log from Travis Jeffery's Distributed Services book
 
 This repository follows the book "Distributed Services with Go" by Travis Jeffrey with some fixes.
 
@@ -7,7 +7,7 @@ The official repository for this book can be found at https://github.com/travisj
 
 This repository is a example of some gRPC capabilities in Go, using docker and k8s (for maximum scalability).
 
-## Pre: Install Go 
+### Pre: Install Go 
 ```
 $ wget https://go.dev/dl/go1.18.4.linux-amd64.tar.gz
 $ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.18.4.linux-amd64.tar.gz
@@ -22,7 +22,7 @@ $ go version
 go version go1.18.4 linux/amd64
 ```
 
-## Compiling the proto files (gRPC):
+### Compiling the proto files (gRPC):
 
 Install protoc binary:
 ```
