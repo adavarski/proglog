@@ -44,24 +44,23 @@ Fist we need to compile all files that will define our grpc protocol, all coded 
 $ cd api/v1/
 $ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative log.proto 
 ```
-## Install cfssl & cfssljson 
+## Install cfssl & cfssljson, make tests, build docker image 
 
 ```
 ### This will download, build, and install all of the utility programs (including cfssl, cfssljson, and mkbundle among others).
-
 $ go install github.com/cloudflare/cfssl/cmd/...@latest
+
+
 $ make init
 $ make gencert
 $ make test
-etc.
-
-```
 
 ### Build docker image:
-```
 $ make build-docker
 $ docker push davarski/proglog:0.0.10
+
 ```
+
 ### K8s deploy
 ```
 
