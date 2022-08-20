@@ -5,7 +5,7 @@ This repository follows the book "Distributed Services with Go" by Travis Jeffre
 The official repository for this book can be found at https://github.com/travisjeffery/proglog
 
 
-This repository is a example of Disributed App with Go (gRPC/Consensus:Raft/Service Discovery: Serf/etc.)
+This repository is a example of Disributed App with Go (gRPC/Consensus:Raft/Service Discovery:Serf/etc.)
 
 ### Pre: Install Go 
 ```
