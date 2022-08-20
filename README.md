@@ -1,4 +1,4 @@
-## Distributed Services with Go: Commit Log from Travis Jeffery's Distributed Services book
+## Distributed Services with Go: Commit Log from Travis Jeffery's book
 
 This repository follows the book "Distributed Services with Go" by Travis Jeffrey with some fixes.
 
