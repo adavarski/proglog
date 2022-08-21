@@ -5,7 +5,7 @@ This repository follows the book "Distributed Services with Go" by Travis Jeffre
 The official repository for this book can be found at https://github.com/travisjeffery/proglog
 
 
-This repository is a example of Disributed App with Go (gRPC/Service Discovery:Serf/Consensus:Raft/etc.)
+This repository is a example of Disributed App with Go (gRPC/Replication Logs - Cluster: Service Discovery:Serf/Consensus:Raft/etc.)
 
 ### Pre: Install Go 
 ```
@@ -38,7 +38,7 @@ Install the protocol compiler plugins for Go using the following commands (Ref: 
 $ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
 $ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 ```
-Fist we need to compile all files that will define our grpc protocol, all coded in the file functions/functions.proto with the following command:
+Fist we need to compile all files that will define our grpc protocol, all coded in the file API/v1 with the following command:
 
 ```
 $ cd api/v1/
@@ -231,11 +231,14 @@ Forwarding from 127.0.0.1:8400 -> 8400
 Forwarding from [::1]:8400 -> 8400
 Handling connection for 8400
 
-### Other terminal: 
+### In other terminal: 
 $ go run cmd/getserver/main.go 
 servers:
 	- id:"proglog-0"  rpc_addr:"proglog-0.proglog.default.svc.cluster.local:8400"
 	- id:"proglog-1"  rpc_addr:"proglog-1.proglog.default.svc.cluster.local:8400"
 	- id:"proglog-2"  rpc_addr:"proglog-2.proglog.default.svc.cluster.local:8400"
 
+
+Note: This means all three servers in our cluster have successfully joined the cluster
+and are coordinating with each other!
 ```
